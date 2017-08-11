@@ -28,7 +28,7 @@ public class DashboardController extends BaseController {
     @PreAuthorize("isAuthenticated()")
     @GetMapping(value = "")
     public Map<String, Object> get() {
-        return new HashMap<>();
+        return new HashMap<String, Object>();
     }
 
 }

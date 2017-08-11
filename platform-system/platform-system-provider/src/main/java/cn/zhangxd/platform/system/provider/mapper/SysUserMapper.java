@@ -4,6 +4,7 @@ package cn.zhangxd.platform.system.provider.mapper;
 import cn.zhangxd.platform.common.service.dao.CrudDao;
 import cn.zhangxd.platform.system.api.entity.SysUser;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * 用户DAO接口
@@ -11,6 +12,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @author zhangxd
  */
 @Mapper
+@Repository
 public interface SysUserMapper extends CrudDao<SysUser> {
 
     /**

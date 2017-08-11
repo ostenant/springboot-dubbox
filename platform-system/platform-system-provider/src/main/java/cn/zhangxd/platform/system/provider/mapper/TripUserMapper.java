@@ -5,6 +5,7 @@ import cn.zhangxd.platform.common.service.dao.CrudDao;
 import cn.zhangxd.platform.system.api.entity.TripUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * 用户
@@ -12,6 +13,7 @@ import org.apache.ibatis.annotations.Param;
  * @author zhangxd
  */
 @Mapper
+@Repository
 public interface TripUserMapper extends CrudDao<TripUser> {
 
     /**

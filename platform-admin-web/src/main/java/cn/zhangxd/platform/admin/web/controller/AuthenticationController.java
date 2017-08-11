@@ -67,7 +67,7 @@ public class AuthenticationController extends BaseController {
         final String token = jwtTokenUtil.generateToken(userDetails);
 
         // Return the token
-        Map<String, Object> tokenMap = new HashMap<>();
+        Map<String, Object> tokenMap = new HashMap<String, Object>();
         tokenMap.put("access_token", token);
         tokenMap.put("expires_in", jwtTokenUtil.getExpiration());
         tokenMap.put("token_type", TokenUtil.TOKEN_TYPE_BEARER);
@@ -90,7 +90,7 @@ public class AuthenticationController extends BaseController {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         final String refreshedToken = jwtTokenUtil.generateToken(userDetails);
 
-        Map<String, Object> tokenMap = new HashMap<>();
+        Map<String, Object> tokenMap = new HashMap<String, Object>();
         tokenMap.put("access_token", refreshedToken);
         tokenMap.put("expires_in", jwtTokenUtil.getExpiration());
         tokenMap.put("token_type", TokenUtil.TOKEN_TYPE_BEARER);

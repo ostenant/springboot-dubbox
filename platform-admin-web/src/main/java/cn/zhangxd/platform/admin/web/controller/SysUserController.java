@@ -107,7 +107,7 @@ public class SysUserController extends BaseController {
             systemService.updateUserPasswordById(user.getId(), passwordEncoder.encode(newPassword));
         }
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<String>(HttpStatus.OK);
     }
 
     /**

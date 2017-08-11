@@ -33,12 +33,10 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         super(m);
     }
 
-    @Override
     public String getString(String key) {
         return Objects.toString(this.get(key));
     }
 
-    @Override
     @SuppressWarnings("unchecked")
     public <E> List<E> getList(String key) {
         Object o = this.get(key);
@@ -48,7 +46,6 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         return new ArrayList<>();
     }
 
-    @Override
     public int getInt(String key) {
         Object value = this.get(key);
         if (value instanceof Integer) {
@@ -57,7 +54,6 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         return NumberHelper.toInt(Objects.toString(value));
     }
 
-    @Override
     public long getLong(String key) {
         Object value = this.get(key);
         if (value instanceof Long) {
@@ -66,7 +62,6 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         return NumberHelper.toLong(Objects.toString(value));
     }
 
-    @Override
     public double getDouble(String key) {
         Object value = this.get(key);
         if (value instanceof Number) {
@@ -75,7 +70,6 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         return NumberHelper.toDouble(Objects.toString(value));
     }
 
-    @Override
     public BigDecimal getDecimal(String key) {
         String str = this.getString(key);
         if (StringHelper.isEmpty(str)) {
@@ -84,7 +78,6 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
         return NumberHelper.createBigDecimal(str);
     }
 
-    @Override
     public Date getDate(String key) {
         Object value = this.get(key);
         if (value instanceof Date) {

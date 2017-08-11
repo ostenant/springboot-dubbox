@@ -62,7 +62,6 @@ public class AuthUser extends AbstractAuthUser {
         this.id = id;
     }
 
-    @Override
     public String getUsername() {
         return loginName;
     }
@@ -80,7 +79,6 @@ public class AuthUser extends AbstractAuthUser {
     }
 
     @JsonIgnore
-    @Override
     public String getPassword() {
         return password;
     }
@@ -125,12 +123,10 @@ public class AuthUser extends AbstractAuthUser {
         return mobile;
     }
 
-    @Override
     public Collection<SimpleGrantedAuthority> getAuthorities() {
         return authorities;
     }
 
-    @Override
     public boolean isEnabled() {
         return enabled;
     }

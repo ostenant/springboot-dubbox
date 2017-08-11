@@ -4,6 +4,7 @@ package cn.zhangxd.platform.system.provider.mapper;
 import cn.zhangxd.platform.common.service.dao.CrudDao;
 import cn.zhangxd.platform.system.api.entity.SysRole;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @author zhangxd
  */
 @Mapper
+@Repository
 public interface SysRoleMapper extends CrudDao<SysRole> {
 
     /**

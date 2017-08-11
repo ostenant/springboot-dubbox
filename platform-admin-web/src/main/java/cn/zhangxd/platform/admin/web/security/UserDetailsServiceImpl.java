@@ -22,7 +22,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private ISystemService systemService;
 
-    @Override
     public UserDetails loadUserByUsername(String loginName) {
         SysUser user = systemService.getUserByLoginName(loginName);
 
